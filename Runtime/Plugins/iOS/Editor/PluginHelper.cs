@@ -12,7 +12,7 @@ public class PluginHelper : MonoBehaviour
     [DllImport("__Internal")]
     private static extern string authenticate(string scheme, string redirectURI);
 
-    public void authenticate()
+    void Start()
     {
         string token = authenticate("game1","game1://oauth-callback");
         textResult.text = token;
