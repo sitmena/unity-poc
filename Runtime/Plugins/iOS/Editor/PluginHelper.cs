@@ -8,7 +8,8 @@ public class PluginHelper : MonoBehaviour
 
     [DllImport("__Internal")]
     private static extern int _addTwoNumberInIOS(int a, int b);
-    DllImport("__Internal")
+    
+    [DllImport("__Internal")]
     private static extern string authenticate(string scheme, string redirectURI);
 
     public void authenticate()
